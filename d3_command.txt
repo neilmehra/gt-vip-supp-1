@@ -1,2 +1,0 @@
-awk 'BEGIN {FS="\t"} !/^#/ { split($10, a, ":"); print a[2] ":" a[3] }' passed_variants.vcf > ok.vcf
-

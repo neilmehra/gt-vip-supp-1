@@ -1,7 +1,0 @@
-awk 'BEGIN {FS="\t"} 
-     !/^#/ {
-         split($10, a, ":");
-         split(a[2], ad, ",");
-         vaf = ad[2] / a[3]; 
-         print vaf 
-     }' passed_variants.vcf > d4.vcf

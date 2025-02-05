@@ -1,6 +1,0 @@
-awk 'BEGIN { OFS="\t" }
-     FNR==NR { vaf[FNR] = $0; next }
-     /^#/ { next }
-     { print $1, $2, vaf[++i] }
-    ' d4.vcf passed_variants.vcf > vaf_values
-
