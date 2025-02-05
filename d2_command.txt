@@ -1,2 +1,2 @@
-awk 'BEGIN {FS="\t"} /^#CHROM/ {print; next} $0 !~ /^#/ && $7=="PASS"' input.vcf > passed_variants.vcf
+awk 'BEGIN {FS="\t"} /^#CHROM/ {print; next} $0 !~ /^#/ && $7=="PASS"' filtered_snps_FR07_t100_N1_lane1.vcf > passed_variants.vcf
 

@@ -1,7 +1,7 @@
 awk 'BEGIN {FS="\t"} 
      !/^#/ {
-         split($10, a, ":");       # a[2] is AD, a[3] is DP
-         split(a[2], ad, ",");     # ad[2] is the alternate allele count
+         split($10, a, ":");
+         split(a[2], ad, ",");
          vaf = ad[2] / a[3]; 
          print vaf 
      }' passed_variants.vcf > d4.vcf
