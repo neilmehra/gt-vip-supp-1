@@ -1,0 +1,2 @@
+awk 'BEGIN {FS="\t"} /^#CHROM/ {print; next} $0 !~ /^#/ && $7=="PASS"' input.vcf > passed_variants.vcf
+

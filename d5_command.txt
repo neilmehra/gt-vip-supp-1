@@ -1,0 +1,9 @@
+awk 'BEGIN { OFS="\t" }
+     # First file: store each VAF value by its record number
+     FNR==NR { vaf[FNR] = $0; next }
+     # For the second file, skip header lines starting with "#"
+     /^#/ { next }
+     # For each variant line, increment counter and print CHROM, POS, and corresponding VAF
+     { print $1, $2, vaf[++i] }
+    ' d4.vcf passed_variants.vcf > vaf_values
+

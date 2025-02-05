@@ -1,0 +1,4 @@
+Lines that are beginning with "#" represent meta information, such as file format, metadata about sequencing, and structure of data lines.
+
+Lines that do not start with "#" make up the data section, where each line represents a genomic variant. Each line has specific details formatted according to the header.
+
